@@ -1,5 +1,4 @@
-package task.project.toodl.assignment.ViewModels;
-
+package task.project.tele.assignment.ViewModels;
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
@@ -28,14 +27,14 @@ Application application;
         if (moviesList == null) {
             moviesList = new MutableLiveData<List<MoviesDataModel>>();
 //we will load it asynchronously from server in this method
-            loadPhotographers();
+            loadMovies();
         }
 //finally we will return the list
         return moviesList;
     }
 
  //calling my library to return parsed movies data in an arraylist
-     private void loadPhotographers() {
+     private void loadMovies() {
         ParserClass.fetchMovieDetails(application, new MoviesLoadingListener() {
             @Override
             public void onMoviesLoaded(List<MoviesDataModel> _data) {

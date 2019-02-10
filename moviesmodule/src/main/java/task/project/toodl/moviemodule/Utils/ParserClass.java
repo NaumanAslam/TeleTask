@@ -48,18 +48,22 @@ public class ParserClass {
                     for (int i =0;i<response.length();i++){
                         JSONObject jsonObject = response.getJSONObject(i);
                         MoviesDataModel moviesDataModel=new MoviesDataModel();
-                        moviesDataModel.setTitle(jsonObject.getString("title"));
-                        moviesDataModel.setDescription(jsonObject.getString("description"));
-                        moviesDataModel.setDirector(jsonObject.getString("director"));
-                        moviesDataModel.setProducer(jsonObject.getString("producer"));
-                        moviesDataModel.setReleaseDate(jsonObject.getInt("release_date"));
+                        if (jsonObject.has("title"))
+                            moviesDataModel.setTitle(jsonObject.getString("title"));
+                        if (jsonObject.has("description"))
+                            moviesDataModel.setDescription(jsonObject.getString("description"));
+                        if (jsonObject.has("director"))
+                            moviesDataModel.setDirector(jsonObject.getString("director"));
+                        if (jsonObject.has("producer"))
+                            moviesDataModel.setProducer(jsonObject.getString("producer"));
+                        if (jsonObject.has("release_date"))
+                            moviesDataModel.setReleaseDate(jsonObject.getInt("release_date"));
                     _data.add(moviesDataModel);
                     }
                     loadResCompletionListener.onMoviesLoaded(_data);
                 } catch (JSONException e) {
                     e.printStackTrace();
-                    // Toast.makeText(context, "Error: " + e.getMessage(),
-                    //   Toast.LENGTH_LONG).show();
+
                 }
             }
         }, new Response.ErrorListener() {
@@ -67,8 +71,7 @@ public class ParserClass {
             @Override
             public void onErrorResponse(VolleyError error) {
                 VolleyLog.d(TAG, "Error: " + error.getMessage());
-                // Toast.makeText(context,error.getMessage(), Toast.LENGTH_SHORT).show();
-                // hide the progress dialog
+
             }
         });
 // Add the request to the RequestQueue.

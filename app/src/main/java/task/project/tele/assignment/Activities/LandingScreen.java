@@ -15,7 +15,7 @@ import java.util.List;
 import task.project.tele.assignment.Adapters.MoviewsRecyclerAdapter;
 import task.project.tele.assignment.R;
 import task.project.tele.assignment.Utils.Utils;
-import task.project.toodl.assignment.ViewModels.MoviesViewModel;
+import task.project.tele.assignment.ViewModels.MoviesViewModel;
 import task.project.toodl.moviemodule.Utils.MoviesDataModel;
 
 public class LandingScreen extends AppCompatActivity {

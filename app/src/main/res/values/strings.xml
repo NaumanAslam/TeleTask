@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Assignment</string>
     <string name="title_activity_details_screen">View Content</string>
-    <string name="title_activity_splash_screen">SplashScreen</string>
-    <string name="title_activity_mdetail_screen">DetailScreen</string>
+    <string name="title_activity_splash_screen">Assignment</string>
+    <string name="title_activity_mdetail_screen">Detail Screen</string>
 </resources>
