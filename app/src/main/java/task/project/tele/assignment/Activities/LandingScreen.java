@@ -32,7 +32,7 @@ public class LandingScreen extends AppCompatActivity {
             public void onChanged(@Nullable List<MoviesDataModel> moviesDataModels) {
                 MoviewsRecyclerAdapter weatherAdapter = new MoviewsRecyclerAdapter(moviesDataModels);
                 recyclerView.setAdapter(weatherAdapter);
-                //hiding the loading popUp view.
+                //hiding the loading popUp view when loaded.
                 Utils.loadingDialog(LandingScreen.this,false);
             }
         });
