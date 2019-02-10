@@ -1,13 +1,1 @@
-//This is my submission for the task, I would like to go through the basic structure and mention a few details here.
-Please find the application under the name "Toodl Task" in your device after installation.
-1. The app consists of 3 modules, 2 of them are library modules for Restaurants and Weather reporting.
-2. The app fetches user location (which offcourse can be improved with more time and focus) and if there is no location available,
-then it will fetch an arbitary location pre defined in the CONSTANTS file.
-3. The app calls relevant methods from the libraries using the methods and interfaces the result is then populated on recycler view in the app module.
-
- I have tried to demonstrate that Im well capable of taking care of your Android development, though I understand that
- there may be shortcomings and improvements needed in the code and structure but I can assure you that Im fully dedicated
- towards improving my code quality, as well as in learning new tools and techniques, also I can definitely write something
-  even better than this if Im given more time and some resources on it. Therefore please consider this submission as a humble
-  effort while I intend to do a lot better and beautiful if I get the chance to be onboard with your team.
-  Thanks.
+//This is my submission for the task assigned for the relevant position interview.
